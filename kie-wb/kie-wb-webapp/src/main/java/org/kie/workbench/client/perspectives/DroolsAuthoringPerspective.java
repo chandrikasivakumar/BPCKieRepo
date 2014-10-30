@@ -145,16 +145,13 @@ public class DroolsAuthoringPerspective {
                 .newTopLevelMenu( constants.newItem() )
                 .withItems( newResourcesMenu.getMenuItems() )
                 .endMenu()
-                .newTopLevelMenu( constants.tools() )
-                .withItems( getToolsMenuItems() )
-                .endMenu()
                 .newTopLevelMenu( AppConstants.INSTANCE.Repository() )
-                .withItems( repositoryMenu.getMenuItems() )
+                .withItems( getRepositoryMenuItems() )
                 .endMenu().build();
     }
 
-    private List<MenuItem> getToolsMenuItems() {
-        List<MenuItem> toolsMenuItems = projectMenu.getMenuItems();
+    private List<MenuItem> getRepositoryMenuItems() {
+        List<MenuItem> toolsMenuItems = repositoryMenu.getMenuItems();
         toolsMenuItems.add(ddMenuItem);
 
         return toolsMenuItems;
